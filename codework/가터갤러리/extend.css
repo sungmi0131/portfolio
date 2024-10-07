@@ -1,0 +1,19 @@
+.error, .success, .message {
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid #000;
+}
+
+.message {
+  background: #ccc;
+}
+
+.success {
+  background: #f00;
+  color: #fff;
+}
+
+.error {
+  background: rgb(5, 5, 230);
+  color: #ccc;
+}

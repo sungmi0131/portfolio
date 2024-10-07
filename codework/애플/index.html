@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apple</title>
+    <link rel="stylesheet" href="/웹디자인/reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="menu-icon">
+        <div class="bar bar1 on"></div>
+        <div class="bar bar2 on "></div>
+        <div class="bar bar3 on"></div>
+    </div>
+    <div class="wrap">
+        <header>
+            <h1><img src="./image/apple_logo_icon_168588.png" alt=""></h1>
+            <p>'Think Different'</p>
+
+            <ul class="menu">
+                <li class="on"><a href="#">apple watch</a></li>
+                <li><a href="#">apple max </a></li>
+                <li><a href="#">apple mac book</a></li>
+            </ul>
+        </header>
+        <section>
+            <article class="art1 on">
+                <div class="item item1">
+                    <div class="ar1">
+                        <h3>건강</h3>
+                        <h4>심장을 세심히 살피다.</h4>
+                    </div>
+                    <div class="ar2">
+                        <h3>안전</h3>
+                        <h4>도움은 언제나 손 가까이.</h4>
+                    </div>
+                </div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+                <div class="item item5"></div>
+                <div class="item item6"></div>
+
+            </article>
+            <article class="art2">
+                <div class="item item1">item1</div>
+                <div class="item item2">item2</div>
+                <div class="item item3">
+                    <h3>음질</h3>
+                    <h2>귀가 열리는 듯한 소리.</h2>
+                    <p>
+                        AirPods Max는 하이파이 오디오와 업계 최고 수준의 액티브 노이즈 캔슬링 기능으로 독보적인 청취 경험을 선사합니다. 맞춤형으로 제작된 드라이버의 각 요소가 연동하여
+                        전체 음역대에 걸쳐 사운드 왜곡을 극한으로까지 줄여주죠. 깊고 풍부한 저음부터 정확한 중음과 선명하고 깨끗한 고음까지, 음 하나하나를 새로운 차원의 깔끔한 음질로 감상할 수
+                        있습니다.
+
+                    </p>
+                </div>
+
+                <div class="item item4">
+                    <h3>디자인</h3>
+                    <h2>
+                        과감하리만치</br>
+                        독창적인 구조.
+                    </h2>
+                </div>
+                <div class="item item5">item5</div>
+                <div class="item item6">
+                    <p>각각의 이어컵에 탑재된 강력한 Apple 제작 H1 칩, 맞춤형 어쿠스틱 디자인 그리고 첨단 소프트웨어로 무장한 AirPods Max는 컴퓨테이셔널 오디오 기술을 이용해 놀라운 청취 경험을 선사합니다. 이 컴퓨테이셔널 오디오 기술은 각각의 칩에 탑재된 10개의 오디오 코어를 이용해 외부 소음을 차단하고, 이어 쿠션의 착용과 밀착 상태에 맞게 오디오를 제어하여 영화 감상 시 마치 영화 속 한가운데에 있는 것 같은 생생한 사운드를 구현합니다.
+                    </p>
+                </div>
+                <div class="item item7">
+                    <h3>매혹적인 경험</h3>
+                    <h2>
+                        컴퓨테이셔널 오디오.</br>
+                        퍼포먼스 담당 센터.
+                    </h2>
+                </div>
+                <div class="item item8">item8</div>
+                <div class="item item9">
+                    <p>
+                        오버이어 헤드폰의 개념을 완전히 재구상했습니다. </br>
+                        그 결과 이어 쿠션부터 캐노피에 이르기까지 AirPods Max는
+                        다양한 머리 모양에 맞는 최적의 어쿠스틱 차폐 공간을
+                        생성하는 완벽한 핏으로 설계되어, 사운드 하나하나의 디테일에 온전히 몰입할 수 있게 해줍니다.
+                    </p>
+                </div>
+                <div class="item item10">item10</div>
+            </article>
+            <article class="art3">
+                <div class="item item1">item1</div>
+                <div class="item item2">item2</div>
+                <div class="item item3">item3</div>
+                <div class="item item4">item4</div>
+                <div class="item item5">item5</div>
+                <div class="item item6">item6</div>
+                <div class="item item7">item7</div>
+                <div class="item item8">item8</div>
+                <div class="item item9">item9</div>
+                <div class="item item10">item10</div>
+                <div class="item item11">item11</div>
+            </article>
+        </section>
+
+
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $('.menu-icon').click(function () {
+            // $('this').find('.bar').addClass('on')
+            $(this).fadeOut()
+            $('header').addClass('on')
+            $('section').addClass('on')
+        })
+
+        $('ul.menu li').click(function () {
+            $('ul.menu li').removeClass('on')
+            $('.menu-icon').fadeIn()
+            $('header').removeClass('on')
+            $('section').removeClass('on')
+            let idx = $(this).index()
+            $('body').removeClass()
+            $('body').addClass('bg' + idx)
+            $('article').removeClass('on')
+            $('article').eq(idx).addClass('on')
+
+        })
+
+    </script>
+</body>
+
+</html>

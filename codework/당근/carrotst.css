@@ -1,0 +1,254 @@
+body {
+    background-color: #F9F5F4;
+}
+
+header {
+    height: 100px;
+    background-image: url(./nexon/bg_header_wrap.gif);
+    border-bottom: 2px solid #000;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+header .container {
+    justify-content: space-between;
+    height: 104px;
+    align-items: center;
+}
+/*nav***********************************************/
+.container h1 img{
+    width: 30%;
+}
+
+
+nav {
+    position: relative;
+    top: 15px;
+}
+
+nav ul {
+    gap: 124px;
+}
+
+nav ul li:hover a {
+    background-position-y: -70px;
+}
+
+nav ul li a {
+    background-image: url(./carrot/nav.png);
+    height: 60px;
+    display: block;
+    color: transparent;
+}
+
+nav ul li:nth-child(1) a {
+    width: 66px;
+}
+
+nav ul li:nth-child(2) a {
+    width: 56px;
+    background-position-x: -91px;
+}
+
+nav ul li:nth-child(3) a {
+    width: 66px;
+    background-position-x: -186px;
+}
+
+nav ul li:nth-child(4) a {
+    width: 68px;
+    background-position-x: -276px;
+}
+
+/*******************************************/
+
+main {
+    width: 712px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside {
+    width: 470px;
+}
+
+div.notice {
+    background: #fff;
+}
+
+main>div {
+    height: 204px;
+    width: 224px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+main>div:hover {
+    background-position-y: -206px;
+    transition: .35s;
+}
+
+main>.game:hover{
+    background-position-x: -224px;
+    transition: .35s;
+}
+main>.event:hover{
+    background-position-x: -224px;
+    transition: .35s;
+}
+.wrap {
+    position: relative;
+    top: 30px;
+    justify-content: space-between;
+}
+
+div.goods {
+    background-image: url(./carrot/1.png);
+}
+
+div.pay {
+    background-image: url(./carrot/2-1.png);
+}
+
+div.game {
+    background-image: url(./carrot/3-1.png);
+}
+
+div.event {
+    background-image: url(./carrot/4-2.png);
+}
+
+div.notice{
+    background-image: url(./carrot/5-1.png);
+
+}
+div.ip {
+    background-image: url(./carrot/6.png);
+}
+
+div.refund {
+    background-image: url(./carrot/7.png);
+}
+
+div.tax {
+    background-image: url(./carrot/8.png);
+}
+
+div.cs {
+    background-image: url(./carrot/9-1.png);
+}
+
+div.remote {
+    background-image: url(./carrot/10.png);
+}
+
+
+main>div.wid2 {
+    width: 469px;
+}
+
+/*********************************************/
+aside {
+    width: 470px;
+}
+
+.row1 {
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    background-image: url(./nexon/bg_txt_id.png)25px center no-repeat rgb(255, 255, 255);
+    width: 338px;
+    padding: 15px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px #d7d7d9 solid;
+
+}
+
+input[type="password"] {
+    background-image: url(./nexon/bg_txt_pw.png)25px center no-repeat rgb(255, 255, 255);
+    width: 338px;
+    padding: 15px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px #d7d7d9 solid;
+}
+
+.input-text input {
+    margin-left: 5px;
+    display: block;
+    border: 1px #bdbdbd solid;
+}
+
+
+.btn {
+    margin-left: 15px;
+}
+
+
+.gub {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 470px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13px;
+    color: #666;
+    border: 1px solid #000;
+}
+
+.info {
+
+    border: 1px solid #000;
+}
+
+.gub .info>li {
+    text-align: baseline;
+    background: url(./nexon/line_footer_menu.png) no-repeat right / 3px;
+    padding: 0 10px;
+}
+
+.info li:last-child{
+    background-image: none;
+}
+
+
+
+.ipip {
+    background-color: #dcdcdc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+aside .box ul{
+    display: flex;
+    justify-content: right;
+}
+aside .box ul li a {
+    background-image: url(./carrot/_rolling_arrow.png );
+    height: 66px;
+    color: transparent;
+    display: block;
+}
+
+aside .box ul li:nth-child(1) a {
+    width: 66px;
+}
+
+aside .box ul li:nth-child(2) a {
+    width: 66px;
+    background-position-x: -67px;
+}
+

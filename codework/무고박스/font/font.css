@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Binggrae-Bold;
+    src: url(./Binggrae-Bold.woff);
+}
+
+@font-face {
+    font-family: Binggrae;
+    src: url(./Binggrae.woff);
+}
+
+@font-face {
+    font-family: jt-font;
+    src: url(./jt-font.woff);
+}
+
+@font-face {
+    font-family: mugo-font;
+    src: url(./mugo-font.woff);
+}
+
+@font-face {
+    font-family: notokr-light;
+    src: url(./notokr-light.woff);
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Light;
+    src: url(./NotoSansCJKkr-Light.woff);
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Medium;
+    src: url(./NotoSansCJKkr-Medium.woff);
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Regular;
+    src: url(./NotoSansCJKkr-Regular.woff);
+}

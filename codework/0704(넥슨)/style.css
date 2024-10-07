@@ -1,0 +1,238 @@
+body {
+    background-color: #cfcfcf;
+}
+
+header {
+    height: 100px;
+    background-image: url(./image/bg_header_wrap.gif);
+    border-bottom: 2px solid #000;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+header .container {
+    justify-content: space-between;
+    height: 104px;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    top: 15px;
+}
+
+nav ul {
+    gap: 124px;
+}
+
+nav ul li:hover a {
+    background-position-y: -70px;
+}
+
+nav ul li a {
+    background-image: url(./image/bg_gnb.gif);
+    border: 1px solid #f00;
+    height: 60px;
+    display: block;
+    color: transparent;
+}
+
+nav ul li:nth-child(1) a {
+    width: 82px;
+}
+
+nav ul li:nth-child(2) a {
+    width: 104px;
+    background-position-x: -92px;
+}
+
+nav ul li:nth-child(3) a {
+    width: 60px;
+    background-position-x: -205px;
+}
+
+nav ul li:nth-child(4) a {
+    width: 80px;
+    background-position-x: -272px;
+}
+
+
+
+main {
+    width: 712px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside {
+    width: 470px;
+}
+
+div.notice {
+    background: #fff;
+}
+
+main>div {
+    height: 205px;
+    width: 226px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+main>div:hover {
+    background-position-y: -205px;
+    transition: .35s;
+}
+
+.wrap {
+    position: relative;
+    top: 30px;
+    justify-content: space-between;
+}
+
+div.goods {
+    background-image: url(./image/bg_goods_info.gif);
+}
+
+div.pay {
+    background-image: url(./image/bg_pay_list.gif);
+}
+
+div.game {
+    background-image: url(./image/bg_game_play.gif);
+}
+
+div.event {
+    background-image: url(./image/bg_event_apply.gif);
+}
+
+div.ip {
+    background-image: url(./image/bg_ip_manage.gif);
+}
+
+div.refund {
+    background-image: url(./image/bg_refund_apply.gif);
+}
+
+div.tax {
+    background-image: url(./image/bg_taxInvoice.gif);
+}
+
+div.cs {
+    background-image: url(./image/bg_customer_center.gif);
+}
+
+div.remote {
+    background-image: url(./image/bg_remote_supply.gif);
+}
+
+
+main>div.wid2 {
+    width: 469px;
+}
+
+/*********************************************/
+aside {
+    width: 470px;
+}
+
+.row1 {
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    background-image: url(./image/bg_txt_id.png)25px center no-repeat rgb(255, 255, 255);
+    width: 338px;
+    padding: 15px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px #d7d7d9 solid;
+
+}
+
+input[type="password"] {
+    background-image: url(./image/bg_txt_pw.png)25px center no-repeat rgb(255, 255, 255);
+    width: 338px;
+    padding: 15px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px #d7d7d9 solid;
+}
+
+.input-text input {
+    margin-left: 5px;
+    display: block;
+    border: 1px #bdbdbd solid;
+}
+
+
+.btn {
+    margin-left: 15px;
+}
+
+
+.gub {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 470px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13px;
+    color: #666;
+    border: 1px solid #000;
+}
+
+.info {
+
+    border: 1px solid #000;
+}
+
+.gub .info>li {
+    text-align: baseline;
+    background: url(./image/line_footer_menu.png) no-repeat right / 3px;
+    padding: 0 10px;
+}
+
+.info li:last-child{
+    background-image: none;
+}
+
+
+
+.ipip {
+    background-color: #dcdcdc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+aside .box ul{
+    display: flex;
+    justify-content: right;
+}
+aside .box ul li a {
+    background-image: url(./image/btn_rolling_arrow.gif );
+    border: 1px solid #000;
+    height: 66px;
+    color: transparent;
+    display: block;
+}
+
+aside .box ul li:nth-child(1) a {
+    width: 66px;
+}
+
+aside .box ul li:nth-child(2) a {
+    width: 66px;
+    background-position-x: -67px;
+}

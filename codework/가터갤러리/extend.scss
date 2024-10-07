@@ -1,0 +1,23 @@
+%message{
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+
+.message{
+    @extend %message;
+    background: #ccc;
+}
+
+.success{
+    @extend %message;
+    background: #f00;
+    color: #fff;
+}
+
+.error{
+    @extend %message;
+    background: rgb(5, 5, 230);
+    color: #ccc;
+}

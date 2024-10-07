@@ -1,0 +1,65 @@
+$primary: rgb(92, 108, 228);
+$secondary: rgb(231, 101, 7);
+
+$font-base: 'serif';
+$padding-base: 10px;
+
+body {
+    font-family: $font-base;
+    color: $primary;
+    padding: $padding-base;
+}
+
+button {
+    background-color: #0aa;
+    padding: $padding-base;
+    border: none;
+
+    &   .primary {
+        background: #000;
+    }
+
+    &.secondary {
+        padding: $padding-base*2;
+    }
+    /*
+    + - * / %
+    */
+
+    &:hover {
+        background: #000;
+    }
+
+}
+
+nav {
+    padding: $padding-base;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            border: 1px solid #000;
+    
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 10px;
+                color: #333;
+    
+                &:hover {
+                    background: #333;
+                }
+    
+                &.on {
+                    background: greenyellow;
+                    color: #333;
+                }
+            }
+    
+        }
+    }
+}

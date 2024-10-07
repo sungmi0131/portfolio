@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논픽션</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrap flex">
+        <section class="sec1">
+            <div class="box">
+                <div id="cube">
+                    <div class="face front"><img src="./image/front1.jpg" alt=""></div>
+                    <div class="face back"><img src="./image/back.png" alt=""></div>
+                    <div class="face right"><img src="./image/right.png" alt=""></div>
+                    <div class="face left"><img src="./image/left.png" alt=""></div>
+                    <div class="face top"><img src="./image/top.png" alt=""></div>
+                    <div class="face bottom">bottom</div>
+                </div>
+            </div>
+        </section>
+
+
+        <ul class="nav">
+            <li class="on" data-text="Front"><img src="./image/img (1).png" alt="">
+                <div class="desc">
+                    <h4>향수</h4>
+                    <p>향이 좋쥬?</p>
+                </div>
+            </li>
+            <li data-text="Back"><img src="./image/img (2).png" alt=""></li>
+            <li data-text="Right"><img src="./image/img (3).png" alt=""></li>
+            <li data-text="Left"><img src="./image/img (4).png" alt=""></li>
+            <li data-text="Top"><img src="./image/img (5).png" alt=""></li>
+            <li data-text="Back"><img src="./image/img (6).png" alt=""></li>
+            <li data-text="Bottom"><img src="./image/img (7).png" alt=""></li>
+            <li data-text="Bottom"><img src="./image/img (10).png" alt=""></li>
+            <li data-text="Back"><img src="./image/img (9).png" alt=""></li>
+        </ul>
+
+        <section class="sec2">
+            <div class="slide-container">
+                <div class="slide-wrap">
+                    <div class="slide">
+                        <img src="./image/bg (1).png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./image/bg (2).png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./image/bg (3).png" alt="">
+                    </div>
+                    <div class="slide"><img src="./image/bg (4).png" alt=""></div>
+                    <div class="slide"><img src="./image/bg (5).png" alt=""></div>
+                </div>
+            </div>
+
+
+
+        </section>
+        
+    </div>
+    <div class="logo">
+        <figure class="scroll-img">
+            <!-- <img src="./image/scroll_bg (1) 1.svg" alt="로고1"> -->
+            <img src="./image/scroll_bg (1) 2.svg" alt="로고1">
+        </figure>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $('ul.nav li').click(function () {
+            let liElem = $(this).attr('data-text')
+            let activeClass = 'show' + liElem
+            $('#cube').removeClass()
+            $('#cube').addClass(activeClass)
+
+        })
+
+
+        let idx = 0;
+
+        setInterval(function () {
+            idx++;
+
+            if (idx === 3) {
+                idx = 0;
+            }
+
+            $('.slide').stop().fadeOut();
+            $('.slide').eq(idx).stop().fadeIn();
+
+        }, 3000); 
+    </script>
+</body>
+
+</html>

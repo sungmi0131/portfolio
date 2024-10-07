@@ -1,0 +1,257 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+/****reset***/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+/*********reset***********/
+body {
+    background: url(./image/bg1.jpg) no-repeat;
+}
+
+.nav img {
+    width: 100%;
+}
+
+/*nav*****************/
+.sec1 {
+    border: 1px solid #f00;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(70%,30%);
+
+}
+
+.nav{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.nav li {
+    width: 33.33%;
+    border: 1px solid #000;
+    display: block;
+    padding: 0px;
+    cursor: pointer;
+}
+
+ul.nav li img{
+    height: 100%;
+    vertical-align: top;
+}
+ul.nav li.on {
+    background: #000;
+    color: #fff;
+}
+ul.nav li .desc:hover{
+    opacity: .85;
+}
+
+ul.nav li .desc{
+    background: #b8b8b8;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .1s;
+}
+ul li h4{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+ul.nav li h4:after{
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);}
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    perspective: 600px;
+    margin: 0px;
+    
+
+}
+
+#cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px);
+    transition: 1s;
+}
+
+#cube.showFront {
+    transform: translateZ(-150px) rotateY(0deg);
+}
+
+#cube.showRight {
+    transform: translateZ(-150px)rotateY(-90deg);
+}
+
+#cube.showLeft {
+    transform: translateZ(-150px)rotateY(90deg);
+}
+
+#cube.showBack {
+    transform: translateZ(-150px)rotateY(-180deg);
+}
+
+#cube.showTop {
+    transform: translateZ(-150px)rotatex(-90deg);
+}
+
+#cube.showBottom {
+    transform: translateZ(-150px)rotatex(90deg);
+}
+
+.face {
+    border: 1px solid #0ff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 300px;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+   
+    transform: rotateY(0deg) translateZ(150px);
+}
+
+.back {
+
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.right {
+
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotatex(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotatex(-90deg) translateZ(150px);
+}
+
+.scroll-img {
+    max-height: 400px;
+    max-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    user-select: none;
+    pointer-events: none;
+}
+
+.scroll-img img {
+    max-width: 100%;
+    animation: rotate-center 5s linear infinite both;
+}
+
+@keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+              filter: hue-rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+              filter: hue-rotate(360deg);
+    }
+  }
+/*slide*************/
+.sec2 {
+    width: 49%;
+    height: 100%;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.sec2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

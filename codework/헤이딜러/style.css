@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+
+:root{
+    --gap : 10px;
+    --gap-half : var(--gap) / 2;
+}
+
+*{
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+h2 {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.just-c{justify-content: center;}
+.pd {
+    padding: 20px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #000;
+    background-image: linear-gradient(to top, #4566de, #476ee2, #4a75e5, #4e7de8, #5384eb, #507edf, #4c78d2, #4972c6, #3c5ea9, #2e4b8c, #203871, #122757);
+
+}
+
+section {
+    justify-content: space-between;
+    text-align: center;
+    gap: var(--gap);
+}
+
+hgroup {
+    text-align: center;
+}
+
+hgroup p {
+    font-size: 2vw;
+    color: #fff;
+}
+
+h1 {
+    width: 30%;
+}
+
+h1 img {
+    width: 120%;
+}
+
+article {
+    text-align: center;
+    border-radius: 10px;
+}
+
+article .item {
+    align-items: center;
+}
+
+.art1,.art2,.item {
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 10px #1e04e3;
+    align-content: end;
+}
+
+.art1 button {
+    width: 100%;
+    border: 2px solid #0000ff;
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight:400;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn li {
+    width: 50%;
+
+}
+.art3{gap:  10px;
+}
+.btn button {
+    width: 100%;
+    background: blue;
+    color: #fff;
+    border-radius: 999px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.item {
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+h3{
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+footer{
+    padding-top: 60px;
+    width: 100%;
+    text-align : center;
+    color: #fff;
+}
+
+.img1{
+    position: absolute;
+    top: 70%;
+    right: -197%;
+    /* transform: translate(52%,-67%); */
+}
+.img1 img{
+    width: 100%;
+}
+/*모바일*/
+@media screen and (max-width: 576px) {
+    body {
+        padding: .75rem;
+    }
+
+    hgroup p {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    .art1 {
+        width: 100%;
+    }
+
+    .art2 {
+        width: 100%;
+    }
+
+    .art3 {
+        width: 100%;
+        
+    }
+
+    .art1 img {
+        width: 100%;
+    }
+
+    .art2 img {
+        width: 50%;
+    }
+
+    .art3 .item {
+        width: calc(50% - var(--gap-half));
+    }
+
+    .art3 img {
+        width: 25%;
+    }
+}
+
+
+/*테블릿*/
+@media screen and (min-width: 577px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    h1 img {
+        max-width: 100%;
+    }
+
+    .art1 {
+        /* width: 48%; */
+        width: calc(50% - var(--gap-half));
+    }
+
+    .art2 {
+        /* width: 48%; */
+        width: calc(50% - var(--gap-half));
+    }
+
+    .art3,.item {
+        width: 100%;
+    }
+
+    .art1 img
+     {
+        width: 50%;
+    }
+
+    .art2 img {
+        width: 50%;
+    }
+}
+
+
+
+/*pc*/
+
+@media screen and (min-width: 980px) {
+    .wrap {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .art1 {
+        width: 30%;
+    }
+
+    .art2 {
+        width: 37%;
+    }
+
+    .art3 {
+        width: 30%;
+    }
+
+    .art1 img {
+        width: 100%;
+    }
+
+
+    .art3 .item {
+        width: 100%;
+    }
+
+    .art3 img {
+        width: 25%;
+    }
+
+}

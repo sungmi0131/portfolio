@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+And+White+Picture&family=Black+Han+Sans&family=Gowun+Dodum&family=Jua&family=Noto+Sans+KR:wght@100..900&family=Single+Day&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+
+/*****************************************************/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.just-c {
+    justify-content: center;
+}
+
+.just-s {
+    justify-content: space-between;
+}
+
+.aligh-c {
+    align-items: center;
+}
+.wrap {
+    max-width: 1380px;
+    margin: auto;
+}
+/**********************************************************/
+body {
+    font-size: 13pt;
+    line-height: 2em;
+    background-color: #fff;
+    color: #948780;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    color: #ff4d72;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1em;
+    margin :50px 0;
+
+}
+
+h3 {
+    color: #032147;
+    font-size: 1.7em;
+    line-height: 1.5em;
+}
+
+h2,
+h3,
+.sec3 p {
+    text-align: center;
+}
+
+button {
+    background-color: #253a73;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding: 15px;
+    margin: 10px;
+
+}
+
+/*header******************************/
+header {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+    color: #ff4d72;
+}
+
+header h1 img {
+    width: 100%;
+    max-width: 200px;
+    padding-left: 20px;
+}
+
+/*nav**********************/
+nav {
+    width: 60%;
+    align-self: center;
+    top: 15px;
+}
+
+nav a {
+    display: block;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+nav .nav {
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*sec1 sec5****************************/
+.sec1 {
+    background-image: url(./overlay.png), url(./rs_brk_td_vis_image-02.jpg);
+    background-size: cover;
+    background-position: center, center;
+    height: 80vh;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    background-attachment: fixed;
+
+}
+
+.sec5 {
+    background-image: url(./overlay.png), url(./rs_brk_td_vis_image-01.jpg);
+    background-size: cover;
+    background-position: center, center;
+    height: 50vh;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+
+.intro h2 {
+    font-size: 40pt;
+    color: #ffffff;
+}
+
+.intro h3 {
+    font-size: 20pt;
+    color: #d6425c;
+}
+
+
+/*container*********************************/
+.container1 {
+    flex-direction: row;
+}
+
+.container2 {
+    flex-direction: column;
+}
+
+/*sec2*********************************/
+.sec2,.sec3{padding: 50px 0;}
+.rmf1 {
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.rmf2 {
+    width: 50%;
+    flex-direction: column;
+}
+
+.rmf1 h2 {
+    line-height: 1.5em;
+}
+
+/*sec3*****************************/
+.sec3 {
+    background-color: #ffb9c4;
+}
+
+
+.img2 img {
+    width: 100%;
+    max-width: 575px;
+    height: 392px;
+    border-radius: 10px;
+}
+
+.sec3 ul {
+    gap: 20px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+
+
+/*sec4*****************************/
+.sec4 {
+    padding: 140px;
+    background-color: #253a73;
+}
+
+.img4 figure img {
+    width: 100%;
+    border-radius: 50%;
+    padding-left: 25px;
+}
+
+
+.one {
+    flex-direction: row-reverse;
+}
+
+.two {
+    flex-direction: row;
+}
+
+h4 {
+    color: #ffb9c4;
+    font-size: 30px;
+}
+.sec4 h3{ color: #fff;}
+.summary1 p,.summary2 p{
+    font-size: 15px;
+    font-weight: 100;
+}
+/*footer************************/
+footer {
+    text-align: center;
+}
+
+.footers ul {
+    gap: 65px;
+    padding: 50px 0;
+}
+
+.footers ul li {
+    font-size: 40px;
+    color: #484848;
+}
+
+.height {
+    color: #ff4d72;
+    text-decoration-line: underline;
+}
+
+
+/*모바일***/
+@media screen and (max-width: 576px) {
+    body {
+        padding: .75rem;
+    }
+
+    .sec1 {
+        width: 100%;
+    }
+
+    .sec2 {
+        width: 100%;
+    }
+
+    .sec3 {
+        width: 100%;
+    }
+
+    .sec4 {
+        width: 100%;padding: 70px;
+    }
+
+    .sec5 {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .rmf1,
+    .rmf2 {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+    .sec3 figure {
+        text-align: center;
+    }
+
+    .sec3 img {
+        width: 301px;
+        height: 392px;
+    }
+
+    .container2 .img4 figure {
+        width: 100%;
+    }
+
+    .summary1,
+    .summary2 {
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .img4 li {
+        width: 100%;
+        align-items: center;
+
+    }
+}
+
+/*테블릿***/
+@media screen and (min-width: 577px) {
+    body {
+        padding: 1rem;
+    }
+    .sec1 {
+        width: 100%;
+    }
+
+    .sec2 {
+        width: 100%;
+    }
+
+    .sec3 {
+        width: 100%;
+    }
+
+    .sec4 {
+        width: 100%;padding: 90px;
+    }
+
+    .sec5 {
+        width: 100%;
+    }
+    nav {
+        display: none;
+    }
+
+    .rmf1,
+    .rmf2 {
+        width: 100%;
+        font-size: 2vw;
+    }
+    .sec3 figure {
+        text-align: center;
+    }
+
+    .sec3 img {
+        width: 262px;
+        height: 392px;
+    }
+
+    .container2 .img4 figure {
+        width: 50%;
+        
+    }
+    .summary1 {
+        width: 50%;
+        text-align: right;
+        color: #ffffff;
+    }
+
+    .summary2 {
+        width: 50%;
+        text-align: left;
+        color: #ffffff;
+    }
+    .img4 li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+
+/*PC***/
+@media screen and (min-width: 980px) {
+    .wrap {
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .container2 .img4 figure {
+        width: 30%;
+    }
+
+    .rmf1,
+    .rmf2 {
+        width: 50%;
+        font-size: 1vw;
+    }
+    .summary1 {
+        width: 66%;
+        text-align: right;
+        color: #ffffff;
+    }
+
+    .summary2 {
+        width: 66%;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .img4 li {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+    }
+    
+.btn li:first-child {
+    margin-right: 40px;
+}
+
+}

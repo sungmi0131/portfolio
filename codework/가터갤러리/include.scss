@@ -1,0 +1,30 @@
+@mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+    margin: 50px;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.card1{
+    @include box-shadow(0,10px,10px,black)
+}
+.card2{
+    @include box-shadow(0px,20px,10px,blue)
+}
+
+@mixin border-radius($radius){
+    padding: 50px;
+    border-radius: $radius
+}
+
+.btn1{
+    @include border-radius(20px)
+}
+.btn2{
+    @include border-radius(10px)
+}
+.btn3{
+    @include border-radius(60px)
+}

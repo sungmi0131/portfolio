@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논픽션</title>
+    <link rel="stylesheet" href="./style2.css">
+
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-wrap">
+            <div class="slide"><video src="./image/Nonfiction Beauty 논픽션 _ Summer Splash.mp4" loop autoplay muted></video></div>
+            <div class="slide"><video src=""></video></div>
+            <div class="slide"><video src=""></video></div>
+            <div class="slide"><video src=""></video></div>
+            <div class="slide"><video src=""></video></div>
+        </div>
+    </div>
+    <div class="cube-box">
+        <div class="box">
+            <div id="cube">
+                <div class="face front"><img src="./image/front1.jpg" alt=""></div>
+                <div class="face back"><img src="./image/back.png" alt=""></div>
+                <div class="face right"><img src="./image/right.png" alt=""></div>
+                <div class="face left"><img src="./image/left.png" alt=""></div>
+                <div class="face top"><img src="./image/top.png" alt=""></div>
+                <div class="face bottom">bottom</div>
+            </div>
+        </div>
+        <ul class="nav">
+            <li class="on">Front</li>
+            <li>Back</li>
+            <li>Right</li>
+            <li>Left</li>
+            <li>Top</li>
+            <li>Bottom</li>
+        </ul>
+    </div>
+    <div class="logo">
+        <figure class="scroll-img">
+            <!-- <img src="./image/scroll_bg (1) 1.svg" alt="로고1"> -->
+            <img src="./image/scroll_bg (1) 2.svg" alt="로고1">
+        </figure>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $('ul.nav li').click(function () {
+            let liElem = $(this).text()
+            let activeClass = 'show' + liElem
+            $('#cube').removeClass()
+            $('#cube').addClass(activeClass)
+
+        })
+
+        let currentClass = '기본값'
+        $('ul.nav li').click(function () {
+            alert(activeClass)
+            $('ul.nav li').removeClass('on')
+            $(this).addClass('on')
+            let $li = $(this).text()
+            let activeClass = 'show' + $li
+            if (currentClass) {
+                $('.cube').removeClass(currentClass)
+            }
+            $('.cube').removeClass(activeClass)
+            currentClass = activeClass
+        })
+
+    </script>
+</body>
+
+</html>

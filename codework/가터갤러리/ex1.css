@@ -1,0 +1,49 @@
+body {
+  font-family: "serif";
+  color: rgb(92, 108, 228);
+  padding: 10px;
+}
+
+button {
+  background-color: #0aa;
+  padding: 10px;
+  border: none;
+  /*
+  + - * / %
+  */
+}
+button .primary {
+  background: #000;
+}
+button.secondary {
+  padding: 20px;
+}
+button:hover {
+  background: #000;
+}
+
+nav {
+  padding: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  border: 1px solid #000;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: #333;
+}
+nav ul li a:hover {
+  background: #333;
+}
+nav ul li a.on {
+  background: greenyellow;
+  color: #333;
+}

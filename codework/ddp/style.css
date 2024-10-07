@@ -1,0 +1,72 @@
+@import '../reset.css';
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(./image/summary_img.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  width: 180px;
+  height: 100%;
+  background: #fff;
+  opacity: 70%;
+  z-index: 99;
+}
+header h1 {
+  border: 1px solid #000;
+  background: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+header nav {
+  border: 1px solid #000;
+  text-align: right;
+}
+header nav a {
+  border: 1px solid #000;
+  display: block;
+  padding: 20px;
+}
+
+section {
+  height: 100%;
+  background: #9395a9;
+  display: flex;
+  position: absolute;
+  top: 0;
+  margin-left: 180px;
+}
+section article {
+  width: 380px;
+  text-align: center;
+}
+section article p {
+  font-size: 15px;
+}
+
+.btn {
+  position: fixed;
+  display: flex;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+.btn a {
+  border: 1px solid #000;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+.btn a img {
+  width: 50px;
+  height: 50px;
+}
+.btn a:hover, .btn a.on {
+  background: rgba(255, 0, 0, 0.6);
+}
+.btn a.prev {
+  display: none;
+}

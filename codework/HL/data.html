@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            width: 500px;
+        }
+
+        figure img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <figure>
+            <img src="./image/image1 (1).png" alt="">
+            <ul>
+                <li data-bg="./image/image1 (1).png">1번</li>
+                <li data-bg="./image/image1 (2).png">2번</li>
+                <li data-bg="./image/image1 (3).png">3번</li>
+            </ul>
+        </figure>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $('li').click(function () {
+
+        //     const img = $(this).data('bg')//get
+        //     $('figure img').attr('src', img)//set
+        // })
+
+        document.querySelectorAll('li').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault()
+                let img = this.dataset.bg
+                document.querySelector('figure img').setAttribute('src', img)
+            })
+        })
+    </script>
+</body>
+
+</html>

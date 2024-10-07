@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        li{list-style: none;}
+        .float {
+            float: left;
+        }
+
+        .float1 {
+            float: right;
+        }
+
+        header {
+            background: rgb(46, 74, 98);
+            color: #fff;
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        section::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        h1 {
+            background: rgb(46, 74, 98);
+            color: #fff;
+        }
+
+        header img {
+            width: 100px;
+        }
+
+        section {
+            width: 100%;
+            border: 1px solid #000;
+        }
+
+        article {
+            border: 1px solid #000;
+            width: 33%;
+            background: #ccc;
+        }
+
+        footer ul {
+            background: #000;
+            color: #ccc;
+            padding: 20px;
+            background: rgb(148, 34, 34);
+            border: 1px solid #000;
+
+        }
+
+        footer::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="bar float">
+                <a href="#" class="menu">
+                    <img src="./image/icon1.png" alt="">
+                </a>
+            </div>
+            <div class="search float">
+                <input type="text">
+                <img src="./image/211817_search_strong_icon.png" alt="">
+            </div>
+            <div class="imgage float">
+                <a href="#">
+                    <img src="./image/desktop-wallpaper-woody-toy-story-disney-pixar.jpg" alt="">
+                </a>
+            </div>
+            <h1>오버 플로우 히든</h1>
+        </header>
+        <section>
+            <article class="float">
+                <figure>
+                    <img src="https://www.w3schools.com/w3css/img_5terre.jpg" alt="">
+                    <figcaption>Cinque Terre
+                    </figcaption>
+                    <p>The Cinque Terre (five lands) is a portion of the Italian Riviera. The coastline with five
+                        villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore is a UNESCO World Heritage
+                        Site</p>
+                </figure>
+            </article>
+            <article class="float">
+                <figure>
+                    <img src="https://www.w3schools.com/w3css/img_monterosso.jpg" alt="">
+                    <figcaption>Monterosso</figcaption>
+                    <p>Monterosso al Mare is located at the center of a small natural gulf, protected by a small
+                        artificial reef, in the Riviera of La Spezia. It is the northernmost village of the Cinque
+                        Terre.</p>
+                </figure>
+            </article>
+            <article class="float">
+                <figure>
+                    <img src="https://www.w3schools.com/w3css/img_vernazza.jpg" alt="">
+                    <figcaption>
+                        Vernazza
+                    </figcaption>
+                    <p>Vernazza is another of the five towns in the Cinque Terre region. Vernazza is the fourth town
+                        heading north. It has no car traffic, and is one of the truest "fishing villages" on the Italian
+                        Riviera.</p>
+                </figure>
+            </article>
+        </section>
+        <footer>
+            <ul class="float">
+                <li>
+                    <a href="#"> HTML Tutorial</a>
+                </li>
+                <li>
+                    <a href="#">CSS Tutorial</a>
+                </li>
+                <li>
+                    <a href="">JavaScript Tutorial</a>
+                </li>
+                <li>
+                    <a href="#">W3.CSS Tutorial</a>
+                </li>
+                <li>
+                    <a href="#">Bootstrap Tutorial</a>
+                </li>
+            </ul>
+            <ul class="float">
+                <li>
+                    <a href="#">HTML Reference</a>
+                </li>
+                <li>
+                    <a href="#">CSS Reference</a>
+                </li>
+                <li>
+                    <a href="">JavaScript Reference</a>
+                </li>
+                <li>
+                    <a href="#">W3.CSS Reference</a>
+                </li>
+                <li>
+                    <a href="#">Browser Statistics</a>
+                </li>
+            </ul>
+
+            <ul class="float">
+                <li>
+                    <a href="#">HTML Examples</a>
+                </li>
+                <li>
+                    <a href="#">CSS Examples</a>
+                </li>
+                <li>
+                    <a href="">JavaScript Examples</a>
+                </li>
+                <li>
+                    <a href="#">W3.CSS Examples</a>
+                </li>
+                <li>
+                    <a href="#">HTML DOM Examples</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.card1 {
+  box-shadow: 0 10px 10px black;
+  margin: 50px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card2 {
+  box-shadow: 0px 20px 10px blue;
+  margin: 50px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn1 {
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.btn2 {
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.btn3 {
+  padding: 50px;
+  border-radius: 60px;
+}

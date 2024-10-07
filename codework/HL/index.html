@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <figure class="video">
+        <video loop autoplay muted>
+            <source src="./image/video1.mp4">
+        </video>
+    </figure>
+    <section class="list">
+        <article data-bg="./image/video1.mp4">
+            <div class="title">
+                <h2>LAUNCHING</h2>
+            </div>
+            <div class="content">
+                <h3>"미래를 만드는 도전"</h3>
+                <p>난 미래를 잘 알아. 왜냐하면
+                    내가 그 미래를 만들 테니까.</br>
+                    너도 자신을 믿고 나아가봐.</p>
+                <button class="btn"><a href="./index1.html">GO</a></button>
+            </div>
+
+        </article>
+        <article data-bg="./image/video2.mp4">
+            <div class="title">
+                <h2>CHANGE</h2>
+            </div>
+            <div class="content">
+                <h3>"세상을 보는 새로운 시각"</h3>
+                <p>
+                    지구에는 단 하루도 같은 날은 없던 것처럼
+                    너를 믿고, </br>변화를 두려워 하지마
+                </p>
+                <button class="btn"><a href="./index2.html">GO</a></button>
+            </div>
+        </article>
+        <article data-bg="./image/video3.mp4">
+            <div class="title">
+                <h2>FORWARD</h2>
+            </div>
+            <div class="content">
+                <h3>"자신의 길을 개척하다"</h3>
+                <p>너만의 방향으로 가다보면</br>
+                    미래로 가는 새로운 길이 열릴거야</p>
+                <button class="btn"><a href="./marshall.html">GO</a></button>
+            </div>
+        </article>
+        <article data-bg="./image/video4.mp4">
+            <div class="title">
+                <h2>ADVENTURE</h2>
+            </div>
+            <div class="content">
+                <h3>
+                    "새로운 세계를 향한 도전"
+                </h3>
+                <p>세상이 생각대로 안 된다고?
+                    너를 믿고 나아가면 </br>더 멋진 미래를 만날거야</p>
+                <button class="btn"><a href="./marshall.html">GO</a></button>
+            </div>
+        </article>
+    </section>
+
+    <div class="frame">
+        <div class="scene"></div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // $('.list li').mouseover(function () {
+
+        //     const img = $(this).data('bg')//get
+        //     $('figure video').attr('src', img)//set
+
+
+        document.querySelectorAll('.list article').forEach(function (a) {
+            a.addEventListener('mouseenter', function (e) {
+                e.preventDefault()
+                let img = this.dataset.bg
+                document.querySelector('figure video').setAttribute('src', img)
+            })
+        })
+
+        // document.querySelectorAll('.btn').forEach((button) => {
+        //     button.addEventListener('click', () => {
+        //         const link = button.closest('article').dataset.link
+        //         window.location.href = link
+        //     })
+        // })
+
+
+        const frame = document.querySelector('.frame')
+        const scene = document.querySelector('.scene')
+        // const h2 = document.querySelector('h2');
+
+        document.querySelectorAll('.btn a').forEach((link) => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                frame.style.top = 0;
+
+
+                //fetch api 자료 불러오기
+                // fetch(href)
+                //     .then(res => res.text())
+                //     .then(data => { scene.innerHTML = data })
+                // document.body.style.overflowY = 'auto';
+
+                fetch(href)
+                    .then(res => res.text())
+                    .then(data => {
+                        // 가져온 HTML을 scene 요소에 추가
+                        scene.innerHTML = data;
+
+                        // // 추가된 DOM에서 스크립트를 찾고 실행
+                        // const scripts = scene.querySelectorAll('script'); // scene 내부의 모든 script 태그 선택
+
+                        // scripts.forEach(script => {
+                        //     const newScript = document.createElement('script');
+                        //     newScript.src = script.src ? script.src : ''; // 외부 스크립트가 있는 경우
+                        //     newScript.innerHTML = script.innerHTML; // 인라인 스크립트의 경우
+                        //     document.body.appendChild(newScript); // 스크립트 추가
+                        // });
+
+                        // Swiper 초기화 (스크립트 실행 후)
+                        var sec2_swiper = new Swiper(".sec2 .launchSwiper", {
+                            slidesPerView: 3, // 한 화면에 들어갈 슬라이드 수
+                            spaceBetween: 30, // 슬라이드간의 간격
+                            freeMode: true, // 
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            }, // swiper navigation
+                        });
+
+                        // a href 안에 "#"" 만 있다면 기본 동작 막음
+                        document.querySelectorAll("a[href='#']").forEach((a) => {
+                            a.addEventListener('click', function (e) {
+                                e.preventDefault();
+                            })
+                        })
+
+                        // 스크롤이 가능하도록 설정
+                        document.body.style.overflowY = 'auto';
+                    })
+                    .catch(error => console.error('Error fetching HTML:', error));
+
+
+
+            })
+        })
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY === 0) {
+                frame.style.top = '100%';
+                document.querySelector('body').style.overflow = 'hidden';
+            }
+        })
+
+
+        // 텍스트를 개별 <span>으로 나누는 함수
+        function splitText(el) {
+            const txt = el.innerText;
+            let tags = '';
+            txt.split('').forEach((letter) => {
+                tags += `<span>${letter}</span>`;
+            });
+            el.innerHTML = tags;
+        }
+
+        // 글자가 밑에서 위로 올라오게 하는 함수
+        function moveUp(el) {
+            const spans = el.querySelectorAll('span');
+            spans.forEach((span, i) => {
+                span.style.transitionDelay = `${i * 0.05}s`; // 순차적으로 애니메이션
+                span.style.transform = 'translateY(0)';
+                span.style.opacity = '1';
+            });
+        }
+
+        // 글자를 다시 밑으로 보내고 숨기는 함수
+        function reseText(el) {
+            const spans = el.querySelectorAll('span');
+            spans.forEach((span, i) => {
+                span.style.transform = 'translateY(100%)';
+                // span.style.opacity = '0';
+            });
+        }
+
+        // 각 텍스트에 대해 splitText 실행
+        document.querySelectorAll('.title h2').forEach((el) => {
+            splitText(el);
+        });
+
+        // 마우스 이벤트에 따라 글자 애니메이션 실행
+        document.querySelectorAll('article').forEach((article) => {
+            article.addEventListener('mouseenter', () => {
+                const h2 = article.querySelector('h2');
+                moveUp(h2);
+            });
+
+            article.addEventListener('mouseleave', () => {
+                const h2 = article.querySelector('h2');
+                reseText(h2);
+            });
+        });
+
+
+    </script>
+
+    
+</body>
+
+</html>

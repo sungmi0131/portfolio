@@ -1,0 +1,99 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+/*reset*/
+body {
+  width: 100%;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+header .video2 {
+  width: 100%;
+}
+
+.sec1 {
+  width: 1400px;
+  margin: 0px auto;
+}
+.sec1 h2 {
+  margin: 38px 0;
+  font-size: 24px;
+}
+.sec1 P {
+  margin: 50px 0px 180px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 130%;
+  color: #020A0A;
+}
+.sec1 ul li {
+  margin: 50px;
+}
+.sec1 ul li figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sec1 ul li figure img {
+  width: 50%;
+  margin: 10px;
+}
+.sec1 ul li figure h3 {
+  font-size: 40px;
+}
+.sec1 ul li figure p {
+  font-size: 20px;
+}
+.sec1 ul li:nth-child(2) figure {
+  flex-direction: row-reverse;
+}
+
+.sec2 {
+  width: 1750px;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sec2 img {
+  width: 20%;
+  height: 50%;
+}
+.sec2 .txt h2 {
+  font-size: 2.8vw;
+  line-height: 3.28125vw;
+}
+.sec2 .txt h3 {
+  margin-top: 2.86458vw;
+}
+.sec2 .txt p {
+  font-size: 1vw;
+  line-height: 1.66667vw;
+}
