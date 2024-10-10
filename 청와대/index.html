@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청와대, 국민품으로 </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <h1>
+                <a href="#">
+                    <img src="./image/logo.png" alt="청와대, 국민 품으로" class="logo-w" />
+                    <img src="./image/logo_black.png" alt="청와대, 국민 품으로" class="logo-b" />
+                </a>
+            </h1>
+            <div class="main-box">
+                <nav>
+                    <ul>
+                        <li class="main-mn">
+                            <a href="#;">개방의 의미</a>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">청와대 소개</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">역사</a></li>
+                                <li><a href="#;">지도 및 주요시설</a></li>
+                                <li><a href="#;">경내 주요 유적</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">관람안내</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">관람 규칙 및 규정</a></li>
+                                <li><a href="#;">관람 시간 및 해설 안내</a></li>
+                                <li><a href="#;">관람 신청</a></li>
+                                <li><a href="#;">관람 안내도</a></li>
+                                <li><a href="#;">함께 가 볼 만한 장소</a></li>
+                                <li><a href="#;">공연 프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">등산로</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">개요</a></li>
+                                <li><a href="#;">등산로 코스</a></li>
+                                <li><a href="#;">등산로 이모저모</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">오시는 길 및 교통정보</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">오시는 길</a></li>
+                                <li><a href="#;">청와대 관람 순환버스</a></li>
+                                <li><a href="#;">서울시 자율주행 버스</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">국민소통</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">공지사항</a></li>
+                                <li><a href="#;">미디어센터</a></li>
+                                <li><a href="#;">자주 하는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-mn">
+                            <a href="#;">내가 만드는 청와대</a>
+                            <ul class="sub-mn">
+                                <li><a href="#;">관람후기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="util-mn">
+                    <ul>
+                        <li><a href="#;">EN</a></li>
+                        <li class="btn"><span><a href="#">전체 메뉴 보기</a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section><img src="./image/photo8.jpg" alt=""></section>
+        <section>sect2</section>
+        <section>sect3</section>
+        <section>sect4</section>
+        <section>sect5</section>
+    </main>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <script>
+        const sections = document.querySelectorAll('section')
+        const footer = document.querySelector('footer')
+        const sectLast = sections[sections.length - 1]
+        const sectLastTop = sectLast.offsetTop
+        // alert(sectLastTop)
+        // console.log(sections)
+
+
+        sections.forEach((sect, i) => {
+
+            sect.addEventListener('wheel', function (e) {
+                e.preventDefault()
+                let delta = e.deltaY
+
+                if (delta < 0 && i === 0) {
+                    return
+                } else if (delta > 0 && i === sections.length - 1) {
+                    footer.scrollIntoView({ behavior: 'smooth' })
+                    return
+                }
+
+                let secTop = delta < 0 ? sect.previousElementSibling : sect.nextElementSibling
+                if (secTop) {
+                    let targetSecTop = secTop.offsetTop
+                    window.scrollTo({
+                        top: targetSecTop,
+                        behavior: 'smooth'
+                    })
+                }
+            })
+        })
+
+        Window.addEventListener('wheel', function (e) {
+            if (e.deltaY < 0 && window.innnerHeight + window.scrollY >= document.body.scrollHeight - 10) {
+                e.preventDefault()
+                window.scrollTo({ top: sectLastTop, behavior: 'smooth' })
+            }
+        })
+
+
+
+        //
+        const btn = document.getElementById('.btn');
+        const menu = document.getElementById('nav');
+
+        btn.addEventListener('click', function () {
+            menu.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
