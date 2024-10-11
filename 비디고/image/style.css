@@ -170,9 +170,6 @@ header .hd .right ul li {
   justify-content: space-between;
   align-items: center;
 }
-.sec2.on .summary1 p, .sec2.on .summary1 h2, .sec2.on .summary1 h3 {
-  opacity: 1;
-}
 .sec2 .summary1 {
   width: 50%;
   text-align: center;
@@ -182,8 +179,6 @@ header .hd .right ul li {
   font-size: 18px;
   color: #e6e6e6;
   margin-bottom: 50px;
-  opacity: 0;
-  top: 0;
 }
 .sec2 .summary1 h2 {
   font-size: 60px;
@@ -191,15 +186,11 @@ header .hd .right ul li {
   line-height: 1.8;
   color: #fff;
   margin-bottom: 24px;
-  opacity: 0;
-  top: 0;
 }
 .sec2 .summary1 h3 {
   font-size: 20px;
   color: #e6e6e6;
   line-height: 1.2;
-  opacity: 0;
-  top: 0;
 }
 .sec2 .video2 {
   width: 50%;
@@ -215,12 +206,6 @@ header .hd .right ul li {
   background-image: linear-gradient(to top, #000 50%, #3100a0 150%);
   padding-top: 100px;
   position: relative;
-}
-.sec3.on .summary p,
-.sec3.on .summary h3,
-.sec3.on .summary h4 {
-  opacity: 1;
-  top: 0;
 }
 .sec3 .sec3-main {
   display: flex;
@@ -437,6 +422,15 @@ header .hd .right ul li {
   color: #e6e6e6;
   font-size: 14px;
 }
+.sec5 .add ul li:nth-child(1) {
+  color: rgb(214, 43, 255);
+}
+.sec5 .add ul li:nth-child(2) {
+  color: rgb(140, 98, 255);
+}
+.sec5 .add ul li:nth-child(3) {
+  color: rgb(64, 148, 255);
+}
 
 .sec6 {
   width: 100%;
@@ -579,4 +573,46 @@ header .hd .right ul li {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+footer {
+  width: 100%;
+  padding: 3.75rem 1.875rem;
+  background-color: #181a1d;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .ft-left h2 img {
+  width: 50%;
+  height: 100%;
+}
+footer .ft-left h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #969aad;
+  margin: 24px 0 18px 0;
+  line-height: 35px;
+}
+footer .ft-left h4 {
+  color: #848484;
+  font-size: 0.75rem;
+}
+footer .ft-right {
+  width: 640px;
+  justify-content: space-between;
+}
+footer .ft-right h3 {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #d5d5d5;
+}
+footer .ft-right ul {
+  font-size: 0.875rem;
+}
+footer .ft-right ul li {
+  margin-bottom: 12px;
+  color: #9b9b9d;
 }
