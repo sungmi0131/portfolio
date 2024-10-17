@@ -1380,7 +1380,6 @@ header {
 
 
                         >li {
-                            border: 1px solid #0ff;
                             display: block;
                             width: 100%;
                             height: 100%;
@@ -1479,9 +1478,82 @@ header {
 
                     }
                 }
+
+                #tab2 {
+                    width: 100%;
+                    height: 440px;
+                    
+
+                    .photo {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        >li {
+                            width: 80%;
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            position: absolute;
+                            top: 50%;
+
+                            a {
+                                position: relative;
+                                display: block;
+                                color: #333;
+                                font-size: 20px;
+                                font-weight: 500;
+                                width: 100%;
+                                height: 100%;
+
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: 0.5s;
+                                }
+
+                                p {
+                                    position: absolute;
+                                    display: block;
+                                    z-index: 1;
+                                    left: 0;
+                                    bottom: 0;
+                                    color: #fff;
+                                    width: 100%;
+                                    padding: 15px 20px;
+                                    background-color: rgba(0, 0, 0, 0.6745098039);
+                                    font-size: 17px;
+                                    font-weight: 400;
+                                    transition: 0.35s;
+                                    opacity: 0;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                            }
+
+                            &:hover {
+
+                                img {
+                                    transform: scale(1.5);
+                                }
+
+                                p {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #tab3 {
+                    display: none;
+                }
+
+                #tab4 {
+                    display: none;
+                }
             }
-
-
         }
 
         .sec5-btn {
@@ -2056,7 +2128,7 @@ header {
                         display: flex;
                         justify-content: space-around;
                         align-items: flex-start;
-                        width: 100%;
+                        width: 90%;
                         gap: 40px;
 
 
@@ -2163,7 +2235,7 @@ header {
                     width: 100%;
                     height: 440px;
 
-                    ul {
+                    .photo {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
@@ -2217,6 +2289,63 @@ header {
                                 p {
                                     opacity: 1;
                                 }
+                            }
+                        }
+                    }
+                }
+
+                #tab3 {
+                    #gallery {
+                        width: 100%;
+                        padding: 30px;
+                        overflow: hidden;
+                        float: left;
+                        position: relative;
+                        
+                    
+                        .gallery-item {
+                            width: 25%;
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            float: left;
+                            position: relative;
+                            
+
+                            img {
+                                width: 100%;
+                                display: block;
+                                transition: 0.5s;
+                            }
+
+                            p {
+                                position: absolute;
+                                display: block;
+                                z-index: 1;
+                                left: 0;
+                                bottom: 0;
+                                color: #fff;
+                                width: 100%;
+                                padding: 15px 20px;
+                                background-color: rgba(0, 0, 0, 0.6745098039);
+                                font-size: 17px;
+                                font-weight: 400;
+                                transition: 0.35s;
+                                opacity: 0;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        &:hover {
+
+                            img {
+                                transform: scale(1.5);
+                            }
+
+                            p {
+                                opacity: 1;
+                                visibility: visible;
                             }
                         }
                     }

@@ -149,6 +149,29 @@ Fancybox.bind('#gallery a', {
     groupAll: true,
 });
 
+var $gallery = $('#gallery').isotope({
+    itemSelector: '.gallery-item',
+    percentPosition: true,
+    masonry: {
+        columnWidth: '.gallery-item',
+        gutter: 18,
+    }
+});
+
+
+
+$gallery.imagesLoaded().progress(function () {
+    $gallery.isotope('layout');
+});
+
+$(function () {
+    $('.gallery-item').each(function () { $(this).hoverdir(); });
+});
+Fancybox.bind("[data-fancybox]", {
+});
+
+
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,

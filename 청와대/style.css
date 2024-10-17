@@ -820,7 +820,6 @@ header {
     width: calc(100% - 60px);
   }
   .sec5 .tab-box .tab-lists .tab .review > li {
-    border: 1px solid #0ff;
     display: block;
     width: 100%;
     height: 100%;
@@ -897,6 +896,66 @@ header {
   }
   .sec5 .tab-box .tab-lists .tab .review > li:hover p {
     opacity: 1;
+  }
+  .sec5 .tab-box .tab-lists #tab2 {
+    width: 100%;
+    height: 440px;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li {
+    width: 80%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li a {
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li a img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li a p {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.6745098039);
+    font-size: 17px;
+    font-weight: 400;
+    transition: 0.35s;
+    opacity: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li:hover img {
+    transform: scale(1.5);
+  }
+  .sec5 .tab-box .tab-lists #tab2 .photo > li:hover p {
+    opacity: 1;
+  }
+  .sec5 .tab-box .tab-lists #tab3 {
+    display: none;
+  }
+  .sec5 .tab-box .tab-lists #tab4 {
+    display: none;
   }
   .sec5 .sec5-btn {
     display: block;
@@ -1367,7 +1426,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    width: 100%;
+    width: 90%;
     gap: 40px;
   }
   .sec5 .tab-box .tab-lists .tab .review > li {
@@ -1452,17 +1511,17 @@ header {
     width: 100%;
     height: 440px;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul {
+  .sec5 .tab-box .tab-lists #tab2 .photo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li {
+  .sec5 .tab-box .tab-lists #tab2 .photo li {
     width: 24%;
     margin-bottom: 20px;
     overflow: hidden;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li a {
+  .sec5 .tab-box .tab-lists #tab2 .photo li a {
     position: relative;
     display: block;
     color: #333;
@@ -1470,12 +1529,12 @@ header {
     font-weight: 500;
     width: 100%;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li a img {
+  .sec5 .tab-box .tab-lists #tab2 .photo li a img {
     width: 100%;
     height: 240px;
     transition: 0.5s;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li a p {
+  .sec5 .tab-box .tab-lists #tab2 .photo li a p {
     position: absolute;
     display: block;
     z-index: 1;
@@ -1493,11 +1552,55 @@ header {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li:hover img {
+  .sec5 .tab-box .tab-lists #tab2 .photo li:hover img {
     transform: scale(1.5);
   }
-  .sec5 .tab-box .tab-lists #tab2 ul li:hover p {
+  .sec5 .tab-box .tab-lists #tab2 .photo li:hover p {
     opacity: 1;
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery {
+    width: 100%;
+    padding: 30px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery .gallery-item {
+    width: 25%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery .gallery-item img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery .gallery-item p {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.6745098039);
+    font-size: 17px;
+    font-weight: 400;
+    transition: 0.35s;
+    opacity: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery:hover img {
+    transform: scale(1.5);
+  }
+  .sec5 .tab-box .tab-lists #tab3 #gallery:hover p {
+    opacity: 1;
+    visibility: visible;
   }
   .sec5 .tab-box .tab-lists #tab4 {
     position: absolute;
