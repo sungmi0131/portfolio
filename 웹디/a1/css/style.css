@@ -1,0 +1,215 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+.just-s {
+    justify-content: space-between;
+}
+
+.align-c {
+    align-items: center;
+}
+
+body {
+    width: 1200px;
+    margin: auto;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+header h1 {}
+
+nav {
+    width: 60%;
+}
+
+li.main-menu {
+    flex: 1;
+    position: relative;
+}
+
+li.main-menu a {
+    display: block;
+    text-align: center;
+}
+
+li.main-menu:hover>a {
+    background: rgb(68, 68, 75);
+    color: #fff;
+}
+
+li.main-menu>a {
+    padding: 10px;
+}
+
+ul.sub-menu {
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    background: #fff;
+}
+
+ul.sub-menu li a {
+    padding: 5px;
+    display: block;
+}
+
+ul.sub-menu li:hover a {
+    color: #fff;
+    background: rgb(68, 68, 75);
+
+}
+
+/*slide*/
+.slide-container {
+    border: 1px solid #f00;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide figure h2 {
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    color: #fff;
+    background: rgba(138, 138, 138, 0.5);
+    overflow: hidden;
+}
+
+/*contents*/
+.contents {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #00f;
+}
+
+.contents>div {
+    width: 33.333%;
+}
+
+/*tab*/
+.tab {
+    padding: 5px;
+}
+
+.tab-menu li {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.tab-menu li.on {
+    color: #fff;
+    background: rgb(68, 68, 75);
+}
+
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.notice li:hover {
+    background: #686868;
+}
+
+.notice li a {
+    display: block;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.gallery {
+    display: none;
+    margin: 10px;
+}
+
+.gallery img {
+    width: 90%;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #0f0;
+}
+
+footer>div {
+    width: 33.333%;
+}
+
+footer .sns li img {
+    width: 40%;
+}
+
+/*popup*/
+.popup {
+    border: 1px solid #000;
+    display: none;
+    background: #dbdbdb;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.popup button {
+    border: 1px solid #000;
+    padding: 5px;
+}
